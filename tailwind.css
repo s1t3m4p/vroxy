@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  @apply w-full py-2 px-3 border border-borderDark rounded-md focus:outline-none focus:border-purple;
+}
+
+.section-title {
+  @apply mb-2;
+}
+
+.footer-link {
+  @apply text-textLight hover:text-purple;
+}
+
+.info-block {
+  @apply flex flex-col gap-3 border border-borderDark rounded-md p-6;
+}
+
+.info-block-title {
+  @apply text-lg font-bold;
+}

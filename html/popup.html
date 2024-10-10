@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vroxy</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="w-96 text-sm text-textDark">
+  <header class="flex justify-between items-center p-5 border-b border-borderLight">
+    <img src="../img/logo.svg" alt="Vroxy" class="h-6">
+    <div class="flex gap-5">
+      <button id="reloadButton" title="Reload current page">
+        <img src="../img/reload.svg" alt="Reload" class="w-5">
+      </button>
+      <button id="infoButton" title="Info">
+        <img src="../img/info.svg" alt="Info" class="w-5">
+      </button>
+    </div>
+  </header>
+
+  <main class="flex flex-col gap-5 p-5">
+    <div>
+      <h2 class="section-title">Configuration</h2>
+      <select name="configuration"
+        class="appearance-none cursor-pointer w-full py-2 px-3 border border-borderDark bg-transparent rounded-md h-[38px] focus:outline-none focus:border-purple bg-[url('/img/arrow.svg')] bg-no-repeat bg-[right_0.75rem_center] bg-[length:1rem]">
+        <option value="browserDefault">Browser Default</option>
+        <option value="custom">Custom</option>
+        <option value="ipAddress">Match IP Address</option>
+        <optgroup label="Locations" id="locationsOptGroup">
+        </optgroup>
+      </select>
+    </div>
+
+    <div>
+      <h2 class="section-title">Time Zone</h2>
+      <input type="text" name="timeZone" class="input">
+    </div>
+
+    <div>
+      <h2 class="section-title">Locale</h2>
+      <input type="text" name="locale" class="input">
+    </div>
+
+    <div class="flex gap-5">
+      <div>
+        <h2 class="section-title">Latitude</h2>
+        <input type="number" name="latitude" class="input">
+      </div>
+      <div>
+        <h2 class="section-title">Longitude</h2>
+        <input type="number" name="longitude" class="input">
+      </div>
+    </div>
+  </main>
+
+  <footer class="flex justify-between items-center p-5 border-t border-borderLight">
+    <a href="https://chromewebstore.google.com/" target="_blank" class="footer-link">Rate Us</a>
+    <a href="mailto:vroxyapp@gmail.com" target="_blank" class="footer-link">Contact</a>
+    <a href="https://github.com/" target="_blank" class="footer-link">Github</a>
+    <div class="text-textLight" id="extensionVersion"></div>
+  </footer>
+  <script src="../js/popup.js" type="module"></script>
+</body>
+
+</html>

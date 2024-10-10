@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22.013"
+   height="22.013"
+   viewBox="0 0 22.013 22.013"
+   fill="none"
+   stroke="currentColor"
+   stroke-width="2"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   class="feather feather-rotate-cw"
+   version="1.1"
+   id="svg1003"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1007" />
+  <g
+     id="g1618"
+     transform="translate(-1.9871558,-0.97634031)">
+    <polyline
+       points="23 4 23 10 17 10"
+       id="polyline999"
+       style="fill:none;fill-opacity:1;stroke:#afafaf;stroke-opacity:1" />
+    <path
+       d="M 20.49,15 C 17.483051,23.51116 5.2207645,22.789626 3.2276339,13.989767 1.7207527,7.3367438 7.5004149,2.3213821 13.167592,3.0294246 14.99631,3.2579 16.813315,4.0823314 18.37,5.64 L 23,10"
+       id="path1001"
+       style="fill:none;fill-opacity:1;stroke:#afafaf;stroke-opacity:1" />
+  </g>
+</svg>

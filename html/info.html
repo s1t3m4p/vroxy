@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vroxy Info</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="flex justify-center w-full text-sm text-textDark leading-6">
+    <div class="flex flex-col gap-6 w-[512px] p-6">
+        <header class="flex justify-center">
+            <img src="../img/logo.svg" alt="Vroxy" class="h-8">
+        </header>
+
+        <main class="flex flex-col gap-6 ">
+            <div class="info-block">
+                <h2 class="info-block-title">Start Using Vroxy</h2>
+                <p>
+                    1. Pin the extension by opening your browser’s extensions menu (found by clicking the puzzle
+                    piece icon next to the address bar) and selecting the thumbtack icon.
+                </p>
+                <p>
+                    2. Click the extension icon on your toolbar (top right of the browser).
+                </p>
+                <p>
+                    3. Adjust the options to your desired values.
+                </p>
+            </div>
+            <div class="info-block">
+                <h2 class="info-block-title">How Vroxy Works</h2>
+                <p>
+                    Vroxy uses the chrome.debugger API to spoof data directly at the browser level,
+                    making it effective across all frames and web workers, unlike other extensions that rely on less
+                    reliable script injections. This approach ensures spoofing is undetectable and works consistently,
+                    even during the initial page load.
+                </p>
+            </div>
+            <div class="info-block">
+                <h2 class="info-block-title">IP Address</h2>
+                <p>
+                    Vroxy does not change your IP address. To change your IP address you will need a VPN or proxy.
+                </p>
+            </div>
+            <div class="info-block">
+                <h2 class="info-block-title">Hide Debugging Notification Bar</h2>
+                <p>
+                    While spoofing data a notification bar becomes visible. Hiding the bar can be done by using the
+                    --silent-debugger-extension-api flag. <a
+                        href="https://www.chromium.org/developers/how-tos/run-chromium-with-flags/" target="_blank"
+                        class="text-purple underline">Instructions on how to run chrome with flags.</a>
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
