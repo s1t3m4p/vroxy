@@ -2,7 +2,7 @@
   "name": "vroxy",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "GPL3",
+  "license": "GPL-3.0-only",
   "dependencies": {
     "tailwindcss": "^3.4.13"
   },
