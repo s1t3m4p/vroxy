@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Vroxy - Spoof Time Zone, Geolocation & Locale",
+  "name": "Vroxy - Change Time Zone, Geolocation & Locale",
   "version": "1.0.0",
-  "description": "Spoof time zone, geolocation & locale. Match your location data to your VPN's ip address.",
+  "description": "Change time zone, geolocation & locale. Match your location data to your VPN's ip address.",
   "background": {
     "service_worker": "js/background.js",
     "type": "module"

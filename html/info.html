@@ -31,10 +31,10 @@
             <div class="info-block">
                 <h2 class="info-block-title">How Vroxy Works</h2>
                 <p>
-                    Vroxy uses the chrome.debugger API to spoof data directly at the browser level,
-                    making it effective across all frames and web workers, unlike other extensions that rely on less
-                    reliable script injections. This approach ensures spoofing is undetectable and works consistently,
-                    even during the initial page load.
+                    Vroxy uses the chrome.debugger API to change data directly at the browser level, making it effective
+                    across all frames and web workers, unlike other extensions that rely on less reliable script
+                    injections. This approach ensures data modifications are undetectable and work consistently, even
+                    during the initial page load.
                 </p>
             </div>
             <div class="info-block">
@@ -46,7 +46,8 @@
             <div class="info-block">
                 <h2 class="info-block-title">Hide Debugging Notification Bar</h2>
                 <p>
-                    While spoofing data a notification bar becomes visible. Hiding the bar can be done by using the
+                    While the extension is on, a notification bar becomes visible. Hiding the bar can be done by using
+                    the
                     --silent-debugger-extension-api flag. <a
                         href="https://www.chromium.org/developers/how-tos/run-chromium-with-flags/" target="_blank"
                         class="text-purple underline">Instructions on how to run chrome with flags.</a>
