@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Vroxy - Change Time Zone, Geolocation & Locale",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Change time zone, geolocation & locale. Match your location data to your VPN's ip address.",
   "background": {
     "service_worker": "js/background.js",
