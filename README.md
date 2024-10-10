@@ -32,31 +32,28 @@ Chrome permissions define the specific browser capabilities and user data that a
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/s1t3m4p/vroxy/refs/heads/main/promo/screenshot_1.png" alt="Screenshot" style="border-radius: 12px;"/>
+<img src="https://raw.githubusercontent.com/s1t3m4p/vroxy/refs/heads/main/promo/screenshot_1.png" alt="Screenshot" />
 
-<img src="https://raw.githubusercontent.com/s1t3m4p/vroxy/refs/heads/main/promo/screenshot_2.png" alt="Screenshot" style="border-radius: 12px;"/>
+<img src="https://raw.githubusercontent.com/s1t3m4p/vroxy/refs/heads/main/promo/screenshot_2.png" alt="Screenshot" />
 
 ## Development
 
 Vroxy is built using JavaScript and Tailwind CSS.
 
-1. **Clone the Repository**  
-   Clone this repository to your local machine.
+1. Clone this repository to your local machine. 
 
-2. **Install Dependencies**  
-   Run the following command to install necessary packages:
+2. Run the following command to install necessary packages:
 
 ```
 yarn
 ```
-3. **Build the Extension**  
-To create the extension package, use:
+3. Build the Extension.
 
 ```
 yarn build
 ```
 
-This command will update the extension source files in the root folder as you modify your styles.
+This command will build in the extsnion and palce it in the /build folder. 
 
 ### Load the Extension in Chrome
 
