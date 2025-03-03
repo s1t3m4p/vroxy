@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="w-96 text-sm text-textDark">
-  <header class="flex justify-between items-center p-5 border-b border-borderLight">
+<body class="w-96 text-sm text-offBlack">
+  <header class="flex justify-between items-center px-5 py-4 border-b border-borderLight">
     <img src="../img/logo.svg" alt="Vroxy" class="h-6">
     <div class="flex gap-5">
       <button id="reloadButton" title="Reload current page">
@@ -25,7 +25,7 @@
     <div>
       <h2 class="section-title">Configuration</h2>
       <select name="configuration"
-        class="appearance-none cursor-pointer w-full py-2 px-3 border border-borderDark bg-transparent rounded-md h-[38px] focus:outline-none focus:border-purple bg-[url('/img/arrow.svg')] bg-no-repeat bg-[right_0.75rem_center] bg-[length:1rem]">
+        class="appearance-none cursor-pointer w-full py-2 px-3 border border-borderDark bg-transparent rounded h-[38px] focus:outline-none focus:border-purple bg-[url('/img/arrow.svg')] bg-no-repeat bg-[right_0.75rem_center] bg-[length:1rem]">
         <option value="browserDefault">Browser Default</option>
         <option value="custom">Custom</option>
         <option value="ipAddress">Match IP Address</option>
@@ -56,12 +56,12 @@
     </div>
   </main>
 
-  <footer class="flex justify-between items-center p-5 border-t border-borderLight">
+  <footer class="flex justify-between items-center px-5 py-4 border-t border-borderLight">
     <a href="https://chromewebstore.google.com/detail/fcalilbnpkfikdppppppchmkdipibalb/reviews" target="_blank"
       class="footer-link">Rate Us</a>
     <a href="mailto:vroxyapp@gmail.com" target="_blank" class="footer-link">Contact</a>
     <a href="https://github.com/s1t3m4p/vroxy" target="_blank" class="footer-link">Github</a>
-    <div class="text-textLight" id="extensionVersion"></div>
+    <div class="text-lightGrey" id="extensionVersion"></div>
   </footer>
   <script src="../js/popup.js" type="module"></script>
 </body>

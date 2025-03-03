@@ -7,7 +7,7 @@
     "tailwindcss": "^3.4.13"
   },
   "scripts": {
-    "build": "rm -rf build && mkdir build && yarn build:css && cp -r html css img js manifest.json build/",
+    "build": "rm -rf build && mkdir build && yarn build:css && cp -r html css img js _locales manifest.json build/",
     "build:css": "tailwindcss -i ./tailwind.css -o ./css/style.css --minify",
     "watch:css": "tailwindcss -i ./tailwind.css -o ./css/style.css --minify --watch"
   }

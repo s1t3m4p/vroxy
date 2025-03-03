@@ -4,11 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        purple: '#a55eea',
-        textDark: '#000c',
-        textLight: '#666',
+        offBlack: '#333',
+        lightGrey: '#666',
         borderLight: '#e8e8e8',
-        borderDark: '#c5c5c5',
+        borderDark: '#c2c2c2',
+      },
+      fontFamily: {
+        sans: ['Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },
