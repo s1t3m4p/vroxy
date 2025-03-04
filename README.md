@@ -24,7 +24,7 @@ https://www.chromium.org/developers/how-tos/run-chromium-with-flags/
 
 Chrome permissions define the specific browser capabilities and user data that an extension can access.
 
-**debugger:** Enables the extension to attach to tabs and emulate user settings such as location, timezone, and locale.
+**debugger:** Enables the extension to attach to tabs and emulate user settings such as location, time zone, and locale.
 
 **webNavigation:** Enables the extension to store and retrieve settings and preferences.
 

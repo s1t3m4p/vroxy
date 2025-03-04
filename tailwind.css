@@ -15,7 +15,7 @@ p {
 }
 
 .section-title {
-  @apply mb-2 text-lightGrey;
+  @apply mb-2;
 }
 
 .footer-link {

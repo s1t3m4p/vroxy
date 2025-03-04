@@ -15,6 +15,9 @@ const timeZoneInput = document.querySelector('input[name="timeZone"]')
 const localeInput = document.querySelector('input[name="locale"]')
 const latitudeInput = document.querySelector('input[name="latitude"]')
 const longitudeInput = document.querySelector('input[name="longitude"]')
+// const debuggerApiModeCheckbox = document.querySelector(
+//   'input[name="debuggerApiMode"]'
+// )
 
 let ipData = null
 
@@ -90,6 +93,7 @@ const saveToStorage = async () => {
     locale: localeInput.value || null,
     lat: parseFloat(latitudeInput.value) || null,
     lon: parseFloat(longitudeInput.value) || null,
+    // useDebuggerApi: debuggerApiModeCheckbox.checked,
   })
 }
 
@@ -101,9 +105,11 @@ const loadFromStorage = async () => {
       'locale',
       'lat',
       'lon',
+      // 'useDebuggerApi',
     ])
     configurationSelect.value = storage.configuration || 'browserDefault'
     setInputs(storage.timezone, storage.locale, storage.lat, storage.lon)
+    // debuggerApiModeCheckbox.checked = storage.useDebuggerApi || false
   } catch (error) {
     console.error('Error loading from storage:', error)
   }
@@ -130,11 +136,11 @@ infoButton.addEventListener('click', () =>
   chrome.tabs.create({ url: 'html/info.html' })
 )
 configurationSelect.addEventListener('change', handleConfigurationChange)
-
 timeZoneInput.addEventListener('input', handleInputChange)
 localeInput.addEventListener('input', handleInputChange)
 latitudeInput.addEventListener('input', handleInputChange)
 longitudeInput.addEventListener('input', handleInputChange)
+// debuggerApiModeCheckbox.addEventListener('change', saveToStorage)
 
 await loadFromStorage()
 await fetchIpData()

@@ -1,55 +1,51 @@
-const attachDebugger = (tabId) => {
-  chrome.storage.local.get(['timezone', 'locale', 'lat', 'lon'], (storage) => {
-    if (storage.timezone || storage.locale || storage.lat || storage.lon) {
-      console.log(storage.lat, storage.lon)
-
-      chrome.debugger.attach({ tabId: tabId }, '1.3', () => {
-        if (!chrome.runtime.lastError) {
-          if (storage.timezone) {
-            chrome.debugger.sendCommand(
-              { tabId: tabId },
-              'Emulation.setTimezoneOverride',
-              {
-                timezoneId: storage.timezone,
-              },
-              () => {
-                if (
-                  chrome.runtime.lastError &&
-                  chrome.runtime.lastError.message?.includes(
-                    'Timezone override is already in effect'
-                  )
-                ) {
-                  chrome.debugger.detach({ tabId })
-                }
+const attachDebugger = (tabId, timezone, locale, lat, lon) => {
+  if (timezone || locale || lat || lon) {
+    chrome.debugger.attach({ tabId: tabId }, '1.3', () => {
+      if (!chrome.runtime.lastError) {
+        if (timezone) {
+          chrome.debugger.sendCommand(
+            { tabId: tabId },
+            'Emulation.setTimezoneOverride',
+            {
+              timezoneId: timezone,
+            },
+            () => {
+              if (
+                chrome.runtime.lastError &&
+                chrome.runtime.lastError.message?.includes(
+                  'Timezone override is already in effect'
+                )
+              ) {
+                chrome.debugger.detach({ tabId })
               }
-            )
-          }
-
-          if (storage.lat || storage.lon) {
-            chrome.debugger.sendCommand(
-              { tabId: tabId },
-              'Emulation.setGeolocationOverride',
-              {
-                latitude: storage.lat,
-                longitude: storage.lon,
-                accuracy: 1,
-              }
-            )
-          }
-
-          if (storage.locale) {
-            chrome.debugger.sendCommand(
-              { tabId: tabId },
-              'Emulation.setLocaleOverride',
-              {
-                locale: storage.locale,
-              }
-            )
-          }
+            }
+          )
         }
-      })
-    }
-  })
+
+        if (lat || lon) {
+          chrome.debugger.sendCommand(
+            { tabId: tabId },
+            'Emulation.setGeolocationOverride',
+            {
+              latitude: lat,
+              longitude: lon,
+              accuracy: 1,
+            }
+          )
+        }
+
+        if (locale) {
+          chrome.debugger.sendCommand(
+            { tabId: tabId },
+            'Emulation.setLocaleOverride',
+            {
+              locale,
+            }
+          )
+        }
+      }
+    })
+  }
 }
 
 const detachDebugger = () => {
