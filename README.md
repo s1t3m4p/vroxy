@@ -2,7 +2,7 @@
 
 **Chrome Download:** https://chromewebstore.google.com/detail/fcalilbnpkfikdppppppchmkdipibalb
 
-Vroxy is a browser extension that changes your time zone, geolocation, and locale to any location you choose. It’s useful for testing websites in different regions, bypassing geo-restrictions, or matching your location data to your VPN IP address.
+Vroxy is a browser extension that spoofs your time zone, geolocation, and locale to any location you choose. It’s useful for testing websites in different regions, bypassing geo-restrictions, or matching your location data to your VPN IP address.
 
 ## How Vroxy Works
 
