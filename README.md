@@ -32,7 +32,7 @@ Chrome permissions define the specific browser capabilities and user data that a
 
 ## Screenshot
 
-<img src="https://raw.githubusercontent.com/s1t3m4p/Cloq/refs/heads/main/promo/screenshot_2.png" alt="Screenshot" />
+<img src="https://raw.githubusercontent.com/s1t3m4p/cloq/refs/heads/main/promo/screenshot_2.png" alt="Screenshot" />
 
 ## Development
 
