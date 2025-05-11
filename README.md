@@ -1,16 +1,16 @@
-# Cloq Extension
+# Cloaq Extension
 
 **Chrome Download:** https://chromewebstore.google.com/detail/fcalilbnpkfikdppppppchmkdipibalb
 
-Cloq is a browser extension that spoofs your time zone, geolocation, and locale to any location you choose. It’s useful for testing websites in different regions, bypassing geo-restrictions, or matching your location data to your VPN IP address.
+Cloaq is a browser extension that spoofs your time zone, geolocation, and locale to any location you choose. It’s useful for testing websites in different regions, bypassing geo-restrictions, or matching your location data to your VPN IP address.
 
-## How Cloq Works
+## How Cloaq Works
 
-Cloq uses the chrome.debugger API to change data directly at the browser level, making it effective across all frames and web workers, unlike other extensions that rely on less reliable script injections. This approach ensures data modifications are undetectable and work consistently, even during the initial page load.
+Cloaq uses the chrome.debugger API to change data directly at the browser level, making it effective across all frames and web workers, unlike other extensions that rely on less reliable script injections. This approach ensures data modifications are undetectable and work consistently, even during the initial page load.
 
 ## IP Address
 
-Cloq does not change your IP address. To change your IP address you will need a VPN or proxy.
+Cloaq does not change your IP address. To change your IP address you will need a VPN or proxy.
 
 ## Hide Debugging Notification Bar
 
@@ -32,11 +32,11 @@ Chrome permissions define the specific browser capabilities and user data that a
 
 ## Screenshot
 
-<img src="https://raw.githubusercontent.com/s1t3m4p/cloq/refs/heads/main/promo/screenshot_2.png" alt="Screenshot" />
+<img src="https://raw.githubusercontent.com/s1t3m4p/cloaq/refs/heads/main/promo/screenshot_2.png" alt="Screenshot" />
 
 ## Development
 
-Cloq is built using JavaScript and Tailwind CSS.
+Cloaq is built using JavaScript and Tailwind CSS.
 
 1. Clone this repository to your local machine.
 
