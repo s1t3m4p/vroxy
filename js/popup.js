@@ -32,13 +32,21 @@ Object.entries(locationsConfigurations).forEach(([key, location]) => {
 const fetchIpData = async () => {
   try {
     const response = await fetch(
-      'http://ip-api.com/json?fields=status,message,countryCode,lat,lon,timezone,query'
+      'https://api.ip.sb/geoip'
     )
+    if (!response.ok) {
+      console.Error(`HTTP error! status: ${response.status}\n${response.statusText}`)
+    }
     const data = await response.json()
-    if (data.status === 'success') {
+    if (data.organization) {
+      delete data['organization', 'isp', 'country', 'region', 'city','asn', 'asn_organization', 'offset', 'continent_code']
+      data.lon = data.longitude
+      data.lat = data.latitude
+      data.countryCode = data.country_code
+      console.log('IP data:', data)
       ipData = data
     } else {
-      console.error(`Failed to reload IP information: ${data.message}`)
+      console.error(`IP invalid: ${data.ip}`)
     }
   } catch (error) {
     console.error('Error fetching IP information:', error)
