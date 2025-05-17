@@ -18,7 +18,7 @@
             <div class="info-block">
                 <h2 class="info-block-title">Start Using Cloaq</h2>
                 <p>
-                    1. Pin the extension by opening your browser’s extensions menu (found by clicking the puzzle
+                    1. Pin the extension by opening your browser's extensions menu (found by clicking the puzzle
                     piece icon next to the address bar) and selecting the thumbtack icon.
                 </p>
                 <p>
@@ -51,6 +51,15 @@
                     --silent-debugger-extension-api flag. <a
                         href="https://www.chromium.org/developers/how-tos/run-chromium-with-flags/" target="_blank"
                         class="text-offBlack underline">Instructions on how to run chrome with flags.</a>
+                </p>
+            </div>
+            <div class="info-block">
+                <h2 class="info-block-title">Limitations</h2>
+                <p>
+                    <strong>Credential Pages:</strong> Cloaq cannot spoof location or timezone on pages containing login forms, password fields, or other credential entry forms (such as Google sign-in, Facebook login, bank sites). Chrome security prevents any extension from debugging these pages to protect your sensitive data.
+                </p>
+                <p>
+                    This is part of Chrome's security features designed to prevent cookie theft and credential stealing. If you see the debugger banner briefly appear and then disappear on such pages, this is expected behavior and not a bug.
                 </p>
             </div>
         </main>

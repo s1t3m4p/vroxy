@@ -2,14 +2,18 @@
 
 **Chrome Download:** https://chromewebstore.google.com/detail/fcalilbnpkfikdppppppchmkdipibalb
 
-Cloaq is a browser extension that spoofs your time zone, geolocation, and locale to any location you choose. It’s useful for testing websites in different regions, bypassing geo-restrictions, or matching your location data to your VPN IP address.
+Cloaq is a browser extension that spoofs your time zone, geolocation, and locale to any location you choose. It's useful for testing websites in different regions, bypassing geo-restrictions, or matching your location data to your VPN IP address.
 
 ## How Cloaq Works
 
 Cloaq uses the chrome.debugger API to change data directly at the browser level, making it effective across all frames and web workers, unlike other extensions that rely on less reliable script injections. This approach ensures data modifications are undetectable and work consistently, even during the initial page load.
 
-## IP Address
+## Known Limitations
 
+### Credential Pages
+Chrome security prevents any extension from using the debugger API on pages with password fields, login forms, or other credential entry points (like Google sign-in, Facebook login, bank sites). If the debugger banner disappears on such pages, this is expected behavior and a security feature of Chrome, not a bug.
+
+### IP Address
 Cloaq does not change your IP address. To change your IP address you will need a VPN or proxy.
 
 ## Hide Debugging Notification Bar
