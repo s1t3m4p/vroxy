@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Cloaq - Change Timezone (Time Shift)"
+    "message": "Cloaked - Change Timezone (Time Shift) & Change Location"
   },
   "extDesc": {
     "message": "Spoof time zone, geolocation & locale. Match your location data to your VPN's IP address."

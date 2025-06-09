@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Vroxy - Location Guard"
+    "message": "Vroxy - Spoof Location & Spoof Time Zone"
   },
   "extDesc": {
     "message": "Spoof time zone, geolocation & locale. Match your location data to your VPN's IP address."
