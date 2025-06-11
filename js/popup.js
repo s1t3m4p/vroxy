@@ -21,6 +21,62 @@ const longitudeInput = document.querySelector('input[name="longitude"]')
 
 let ipData = null
 
+// Check for warning messages that need to be displayed
+const checkForWarnings = async () => {
+  try {
+    const { showWarningMessage, warningMessage } = await chrome.storage.local.get([
+      'showWarningMessage',
+      'warningMessage'
+    ]);
+
+    if (showWarningMessage) {
+      // Create warning element if it doesn't exist
+      let warningElement = document.getElementById('warningMessage');
+      if (!warningElement) {
+        warningElement = document.createElement('div');
+        warningElement.id = 'warningMessage';
+        warningElement.style.padding = '8px 12px';
+        warningElement.style.marginBottom = '10px';
+        warningElement.style.backgroundColor = '#f8d7da';
+        warningElement.style.color = '#721c24';
+        warningElement.style.borderRadius = '4px';
+        warningElement.style.fontSize = '12px';
+
+        // Add close button
+        const closeButton = document.createElement('button');
+        closeButton.textContent = '✕';
+        closeButton.style.float = 'right';
+        closeButton.style.border = 'none';
+        closeButton.style.background = 'none';
+        closeButton.style.cursor = 'pointer';
+        closeButton.style.fontSize = '14px';
+        closeButton.style.color = '#721c24';
+        closeButton.style.padding = '0 0 0 8px';
+        closeButton.style.marginTop = '-2px';
+        closeButton.addEventListener('click', (e) => {
+          e.stopPropagation();
+          warningElement.remove();
+        });
+
+        warningElement.appendChild(closeButton);
+
+        // Insert warning at the top of the popup body
+        document.body.insertBefore(warningElement, document.body.firstChild);
+      }
+
+      // Add message text (after the close button)
+      const messageText = document.createTextNode(warningMessage || 'Spoofing failed on a page you visited.');
+      warningElement.appendChild(messageText);
+
+      // Clear the badge and warning flag
+      chrome.action.setBadgeText({ text: '' });
+      chrome.storage.local.set({ showWarningMessage: false });
+    }
+  } catch (error) {
+    console.error('Error checking for warnings:', error);
+  }
+};
+
 // Add location options to the select menu
 Object.entries(locationsConfigurations).forEach(([key, location]) => {
   const option = document.createElement('option')
@@ -95,6 +151,15 @@ const saveToStorage = async () => {
     lon: parseFloat(longitudeInput.value) || null,
     // useDebuggerApi: debuggerApiModeCheckbox.checked,
   })
+
+  // Notify the background script that settings have changed
+  chrome.runtime.sendMessage({ action: 'settingsChanged' }, (response) => {
+    if (chrome.runtime.lastError) {
+      console.error(`Error sending settingsChanged message: ${chrome.runtime.lastError.message}`)
+    } else {
+      console.log('Settings update notification sent to background script')
+    }
+  })
 }
 
 const loadFromStorage = async () => {
@@ -142,5 +207,7 @@ latitudeInput.addEventListener('input', handleInputChange)
 longitudeInput.addEventListener('input', handleInputChange)
 // debuggerApiModeCheckbox.addEventListener('change', saveToStorage)
 
+// Check for warnings when the popup opens
+await checkForWarnings();
 await loadFromStorage()
 await fetchIpData()
