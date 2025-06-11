@@ -32,6 +32,26 @@
         <optgroup label="Locations" id="locationsOptGroup">
         </optgroup>
       </select>
+      <div class="flex items-center gap-2 mt-2">
+        <input type="text" name="configName" placeholder="Configuration name"
+          class="flex-1 py-1 px-2 text-sm border border-borderDark rounded focus:outline-none focus:border-purple hidden">
+        <div class="flex gap-2">
+          <button name="saveConfig" class="text-sm text-purple hover:text-purpleDark hidden">
+            Save
+          </button>
+          <button name="cancelEdit" class="text-sm text-gray-600 hover:text-gray-800 hidden">
+            Cancel
+          </button>
+          <div name="configActions" class="flex gap-2 hidden">
+            <button name="editConfig" class="text-sm text-blue-600 hover:text-blue-800">
+              Edit
+            </button>
+            <button name="deleteConfig" class="text-sm text-red-600 hover:text-red-800">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div>
